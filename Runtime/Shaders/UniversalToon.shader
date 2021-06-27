@@ -110,6 +110,11 @@ Shader "Universal Render Pipeline/Toon" {
 //RimLight
         [Toggle(_)] _LightDirection_MaskOn ("LightDirection_MaskOn", Float ) = 0
         _Tweak_LightDirection_MaskLevel ("Tweak_LightDirection_MaskLevel", Range(0, 0.5)) = 0
+        //Built-in Light Direction
+        [Toggle(_)] _Is_RimLightBLD ("Advanced : Activate RimLight Built-in Light Direction", Float ) = 0
+        _Offset_X_Axis_RimLightBLD (" Offset X-Axis (RimLight Built-in Light Direction)", Range(-1, 1)) = -0.05
+        _Offset_Y_Axis_RimLightBLD (" Offset Y-Axis (RimLight Built-in Light Direction)", Range(-1, 1)) = 0.09
+        [Toggle(_)] _Inverse_Z_Axis_RimLightBLD (" Inverse Z-Axis (RimLight Built-in Light Direction)", Float ) = 1
         [Toggle(_)] _Add_Antipodean_RimLight ("Add_Antipodean_RimLight", Float ) = 0
         _Ap_RimLightColor ("Ap_RimLightColor", Color) = (1,1,1,1)
         [Toggle(_)] _Is_LightColor_Ap_RimLight ("Is_LightColor_Ap_RimLight", Float ) = 1

@@ -88,6 +88,10 @@
             uniform fixed _RimLight_FeatherOff;
             uniform fixed _LightDirection_MaskOn;
             uniform float _Tweak_LightDirection_MaskLevel;
+			uniform fixed _Is_RimLightBLD;
+            uniform float _Offset_X_Axis_RimLightBLD;
+            uniform float _Offset_Y_Axis_RimLightBLD;
+            uniform fixed _Inverse_Z_Axis_RimLightBLD;
             uniform fixed _Add_Antipodean_RimLight;
             uniform float4 _Ap_RimLightColor;
             uniform fixed _Is_LightColor_Ap_RimLight;
