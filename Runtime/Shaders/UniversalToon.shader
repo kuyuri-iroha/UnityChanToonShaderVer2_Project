@@ -60,6 +60,10 @@ Shader "Universal Render Pipeline/Toon" {
         [Toggle(_)] _Use_1stAs2nd ("Use 1st_ShadeMap as 2nd_ShadeMap", Float ) = 0
         _2nd_ShadeColor ("2nd_ShadeColor", Color) = (1,1,1,1)
         [Toggle(_)] _Is_LightColor_2nd_Shade ("Is_LightColor_2nd_Shade", Float ) = 1
+		
+		_MultiplyColor ("MultiplyColor", Color) = (1,1,1,1)
+		_MultiplyLevel ("MultiplyLevel", Range(0, 1)) = 0
+
         _NormalMap ("NormalMap", 2D) = "bump" {}
         _BumpScale ("Normal Scale", Range(0, 1)) = 1
         [Toggle(_)] _Is_NormalMapToBase ("Is_NormalMapToBase", Float ) = 0

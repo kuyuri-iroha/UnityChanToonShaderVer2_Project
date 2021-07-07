@@ -167,6 +167,10 @@
                 //
                 //Composition: 3 Basic Colors as Set_FinalBaseColor
                 float3 Set_FinalBaseColor = lerp(Set_BaseColor,lerp(Set_1st_ShadeColor,Set_2nd_ShadeColor,saturate((1.0 + ( (_HalfLambert_var - (_ShadeColor_Step-_1st2nd_Shades_Feather)) * ((1.0 - _Set_2nd_ShadePosition_var.rgb).r - 1.0) ) / (_ShadeColor_Step - (_ShadeColor_Step-_1st2nd_Shades_Feather))))),Set_FinalShadowMask); // Final Color
+				
+				// Additional: Color multiply to Set_FinalBaseColor
+				Set_FinalBaseColor = lerp(Set_FinalBaseColor, Set_FinalBaseColor * _MultiplyColor, saturate(_MultiplyLevel));
+
 #ifdef _SYNTHESIZED_TEXTURE
                 float4 _Set_HighColorMask_var = tex2D(_HighColor_TexSynthesized, TRANSFORM_TEX(Set_UV0, _HighColor_TexSynthesized)).aaaa;
 #else

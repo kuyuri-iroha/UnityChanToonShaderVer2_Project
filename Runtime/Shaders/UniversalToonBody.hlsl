@@ -43,6 +43,10 @@
             uniform sampler2D _2nd_ShadeMap; uniform float4 _2nd_ShadeMap_ST;
             uniform float4 _2nd_ShadeColor;
             uniform fixed _Is_LightColor_2nd_Shade;
+
+            uniform float4 _MultiplyColor;
+            uniform float _MultiplyLevel;
+
             uniform sampler2D _NormalMap; uniform float4 _NormalMap_ST;
             uniform fixed _Is_NormalMapToBase;
             uniform fixed _Set_SystemShadowsToBase;
